@@ -47,4 +47,11 @@ for {  // Infinite loop (runs at least once)
 		break
 	}
 }
+
+//calling a function
+fmt.Println(add(5, 6, 7))
+}
+
+func add(a int, b int, c int) int {
+	return a+b-c
 }
