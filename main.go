@@ -25,4 +25,13 @@ func main () { // entry point of the project
 	for i := 0; i < 5; i++ { 
 		fmt.Println(i)
 	}	
+
+	//using for as while loop ( Go does not have while loop or dowhile loop)
+	count := 0
+    
+    // while (count < 5)  in other languages
+    for count < 5 {
+        fmt.Println("Count:", count)
+        count++
+}
 }
