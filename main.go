@@ -34,4 +34,17 @@ func main () { // entry point of the project
         fmt.Println("Count:", count)
         count++
 }
+
+// using for for do while loop
+counts := 0
+
+for {  // Infinite loop (runs at least once)
+	fmt.Println("Count:", counts)
+	counts++
+
+	// Condition check after execution
+	if counts >= 5 {
+		break
+	}
+}
 }
