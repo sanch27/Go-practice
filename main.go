@@ -48,10 +48,25 @@ for {  // Infinite loop (runs at least once)
 	}
 }
 
+//stuct 
+
+//Predefined data should be given 
+type Person struct { // Structs are used to define custom data types.
+    Name string
+    Age  int
+}
+
+p := Person{"John Doe", 25} // Persn is object
+fmt.Printf("Name: %s\nAge: %d\n", p.Name, p.Age) // Call by variable and attribute 
+
+
 //calling a function
 fmt.Println(add(5, 6, 7))
 }
 
 func add(a int, b int, c int) int {
 	return a+b-c
+
 }
+
+
