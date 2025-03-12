@@ -20,4 +20,9 @@ func main () { // entry point of the project
 		fmt.Println("Half-century!")
 	} else { fmt.Println("Not a half-century!") }	
 
+	//for (loop statement)
+	//For is the only loop in go it hasscope only within the loop
+	for i := 0; i < 5; i++ { 
+		fmt.Println(i)
+	}	
 }
