@@ -11,7 +11,8 @@ import (
 func SetupRoutes(app *fiber.App) {
 	// User routes
 	fmt.Println("Routes")
-	app.Get("/", controllers.GetHome)       // Display users
-	app.Get("/users", controllers.GetUsers) // Display users
+	app.Get("/", controllers.GetHome)               // Display users
+	app.Get("/users", controllers.GetUsers)         // Display users
+	app.Get("/api/users", controllers.GetUsersJSON) // Display users
 	// app.Post("/users", controllers.AddUser)   // Add a new user
 }
