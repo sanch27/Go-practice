@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"go-tutorial/database"
 	"go-tutorial/models"
 
@@ -40,4 +41,24 @@ func AddUser(c *fiber.Ctx) error {
 
 	// Redirect after adding a user (if using a form)
 	return c.Redirect("/users")
+}
+
+func EditUserPage(c *fiber.Ctx) error {
+	id := c.Params("id") // Get ID from URL
+	db := database.DB
+	var user models.User
+
+	// Find the user by ID
+	if err := db.First(&user, id).Error; err != nil {
+		fmt.Println("User not found for ID:", id)
+		return c.Status(404).SendString("User not found")
+	}
+
+	// Debugging: Print retrieved user
+	fmt.Println("Editing User:", user)
+
+	// Pass user data to template
+	return c.Render("edit_user", fiber.Map{
+		"User": user,
+	})
 }

@@ -17,4 +17,6 @@ func SetupRoutes(app *fiber.App) {
 	// app.Post("/users", controllers.AddUser)   // Add a new user
 	// ✅ Allow POST requests to add a user
 	app.Post("/users", controllers.AddUser)
+	app.Get("/users/edit/:id", controllers.EditUserPage) // Edit form
+	// app.Post("/users/edit/:id", controllers.UpdateUser)  // Update user
 }
